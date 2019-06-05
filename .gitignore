@@ -1,0 +1,35 @@
+syntax: glob
+.idea/
+*.sqlite
+*.sqlite3
+*.pyc
+*.swp
+*.env
+*.swo
+*.db
+*.log
+*.xls
+*.py~
+*.html~
+*.css~
+*.orig
+*.sqlite
+*.DS_Store
+.vscode/*
+*.pid
+*.rdb
+media/*
+media/uploads/*
+creditblue/media/*
+staticfiles/*
+staticfiles
+local_settings.py
+cache/*
+logs/*
+.vscode
+creditblue.sh
+creditblue_db
+
+# switch to regexp syntax.
+syntax: regexp
+^media/img/mkt_base.\d+.*
