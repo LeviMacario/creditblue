@@ -26,6 +26,10 @@ shell:
 collectstatic:
 	@python manage.py collectstatic --noinput
 
+sshadd:
+	@eval `ssh-agent`
+	@sudo ssh-add -K ~/.ssh/id_rsa
+
 # Caso use fabric
 deploy:
 	@export env_deploy=$(env)

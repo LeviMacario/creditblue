@@ -1,4 +1,4 @@
-<img src="https://www.onidata.com/img/logo.png" width="127px" align="left"/>
+<img src="https://www.onidata.com/img/logo-rodape.jpg" width="127px" align="left"/>
 
 # Credit Blue
 
@@ -42,7 +42,7 @@ Algumas instruções para desenvolver no Credit Blue:
 1. **Clonando o repositório**
 
 	```sh
-	$ git clone git@github.com:levimacario/creditblue.git
+	$ git clone git@github.com:LeviMacario/creditblue.git
 	```
 
 2. **Rodando o servidor**
@@ -88,6 +88,8 @@ Algumas instruções para desenvolver no Credit Blue:
 
 - **`creditblue`**: Toda a estrutura de arquivos e pastas do projeto.
     - **`core`**: App central para auxiliar as demais apps.
+    - **`contracts`**: App responsável pelos contratos, empréstimos e clientes.
+    - **`financial`**: App responsável pelos bancos e transações financeiras.
     - **`api`**: App responsável pela api do projeto.
     - **`creditblue`**: App raiz do projeto onde localiza-se o settings.py.
     - **`users`**: App responsável pelos usuários.
