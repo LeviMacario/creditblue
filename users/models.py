@@ -33,3 +33,12 @@ class User(AbstractUser, TimeStampedModel):
     @property
     def full_name(self):
         return '{0} {1}'.format(self.first_name, self.last_name)
+
+    def serialize(self):
+        return {
+            'username': self.username,
+            'email': self.email,
+            'first_name': self.first_name,
+            'last_name': self.last_name,
+            'avatar': self.avatar.url
+        }
