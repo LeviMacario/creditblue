@@ -24,7 +24,7 @@ class User(AbstractUser, TimeStampedModel):
     )
     activation_key = models.CharField(max_length=40, blank=True)
     key_expires = models.DateTimeField(auto_now_add=True)
-    
+
     objects = UserManager()
 
     def __str__(self):

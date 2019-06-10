@@ -34,7 +34,7 @@ class TimeStampedModel(DeleteModel):
         if not self.id:
             self.created_at = datetime.now(tz=TZ)
         self.updated_at = datetime.now(tz=TZ)
-        return super(TimeStampedModel, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)
 
 
 class StatusDate(TimeStampedModel):

@@ -34,7 +34,8 @@ class SoftDeletionMixin(SingleObjectMixin, View):
         self.object.deleted_at = datetime.now(tz=TZ)
         self.object.save(update_fields=['deleted_at'])
         messages.add_message(
-            request, messages.SUCCESS,
+            request,
+            messages.SUCCESS,
             '{0} excluído com sucesso!'.format(self.object)
         )
         return HttpResponseRedirect(success_url)
@@ -43,7 +44,8 @@ class SoftDeletionMixin(SingleObjectMixin, View):
     def post(self, request, *args, **kwargs):
         if request.user == self.get_object():
             messages.add_message(
-                request, messages.ERROR,
+                request,
+                messages.ERROR,
                 'Operação não permitida!'
             )
             return HttpResponseRedirect(self.success_url)
