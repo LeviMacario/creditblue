@@ -72,7 +72,7 @@ Algumas instruções para desenvolver no Credit Blue:
     Crie um banco de dados "creditblue" com usuário "creditblue" e senha "12345" no postgres(Pode usar o pgAdmin):
 
 
-    Instalação das dependências e criação das tabelas no banco de dados:
+    Instalação das dependências, criação das tabelas e população do banco de dados:
 
 	```sh
 	$ make setup
@@ -84,12 +84,18 @@ Algumas instruções para desenvolver no Credit Blue:
 	$ make run
 	```
 
+3. **Acessando a Administração do sistema**
+
+    1. Acesse: http://localhost:8000/admin
+    2. Entre com usuário: admin@creditblue.com e senha: @123456!
+
 ## Estrutura do projeto
 
 - **`creditblue`**: Toda a estrutura de arquivos e pastas do projeto.
     - **`core`**: App central para auxiliar as demais apps.
-    - **`contracts`**: App responsável pelos contratos, empréstimos e clientes.
-    - **`financial`**: App responsável pelos bancos e transações financeiras.
+    - **`contracts`**: App responsável pelos contratos de empréstimos e pagamentos.
+    - **`financial`**: App responsável pelos bancos.
+    - **`customers`**: App responsável pelos clientes que contratam empréstimos.
     - **`api`**: App responsável pela api do projeto.
     - **`creditblue`**: App raiz do projeto onde localiza-se o settings.py.
     - **`users`**: App responsável pelos usuários.
