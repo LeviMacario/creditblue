@@ -33,6 +33,11 @@ class LoanContract(StatusDate):
     interest_rate = models.DecimalField('Taxa de juros', **DECIMAL_OPTS)
     ip_address = models.GenericIPAddressField('Endereço IP')
     submission_date = models.DateField('Data de submissão', auto_now_add=True)
+    responsible = models.ForeignKey(
+        'users.User',
+        on_delete=models.PROTECT,
+        verbose_name='Responsável'
+    )
     bank = models.ForeignKey(
         'financial.Bank',
         on_delete=models.PROTECT,
