@@ -11,7 +11,10 @@ migrations:
 migrate:
 	@python manage.py migrate
 
-setup: deps migrate
+loaddata:
+	@python manage.py loaddata initial_data.json
+
+setup: deps migrate loaddata
 
 run:
 	@python manage.py runserver 0.0.0.0:8000

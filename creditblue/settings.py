@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'core',
     'users',
     'financial',
+    'customers',
     'contracts',
     'api',
 ]
@@ -104,6 +105,7 @@ DATABASES = {
         'PORT': os.environ.get('DB_PORT'),
     },
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

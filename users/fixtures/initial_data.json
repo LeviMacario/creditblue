@@ -1,0 +1,26 @@
+[
+    {
+        "model": "users.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$ejgnSirtbPov$t2MwhzV9Zjn3KvSSIxfgnwNHuXf+fjfoVx8/QfiNJ9k=",
+            "last_login": "2019-06-11T01:51:58Z",
+            "is_superuser": true,
+            "username": "admin@creditblue.com",
+            "first_name": "Admin",
+            "last_name": "CreditBlue",
+            "email": "admin@creditblue.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2019-06-11T01:51:30Z",
+            "deleted_at": null,
+            "created_at": "2019-06-11T01:51:30.362Z",
+            "updated_at": "2019-06-11T02:01:25.801Z",
+            "avatar": "",
+            "activation_key": "",
+            "key_expires": "2019-06-11T01:51:30.362Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

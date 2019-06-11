@@ -1,0 +1,102 @@
+[
+    {
+        "model": "financial.bank",
+        "pk": 1,
+        "fields": {
+            "bank": "341",
+            "status": true,
+            "created_at": "2019-06-10T15:00:00Z",
+            "updated_at": "2019-06-10T15:00:00Z"
+        }
+    },
+    {
+        "model": "financial.bank",
+        "pk": 2,
+        "fields": {
+            "bank": "237",
+            "status": true,
+            "created_at": "2019-06-10T15:00:01Z",
+            "updated_at": "2019-06-10T15:00:01Z"
+        }
+    },
+    {
+        "model": "financial.bank",
+        "pk": 3,
+        "fields": {
+            "bank": "104",
+            "status": true,
+            "created_at": "2019-06-10T15:00:02Z",
+            "updated_at": "2019-06-10T15:00:02Z"
+        }
+    },
+    {
+        "model": "financial.bank",
+        "pk": 4,
+        "fields": {
+            "bank": "001",
+            "status": true,
+            "created_at": "2019-06-10T15:00:03Z",
+            "updated_at": "2019-06-10T15:00:03Z"
+        }
+    },
+    {
+        "model": "financial.bank",
+        "pk": 5,
+        "fields": {
+            "bank": "033",
+            "status": true,
+            "created_at": "2019-06-10T15:00:04Z",
+            "updated_at": "2019-06-10T15:00:04Z"
+        }
+    },
+    {
+        "model": "financial.bank",
+        "pk": 6,
+        "fields": {
+            "bank": "041",
+            "status": true,
+            "created_at": "2019-06-10T15:00:05Z",
+            "updated_at": "2019-06-10T15:00:05Z"
+        }
+    },
+    {
+        "model": "financial.bank",
+        "pk": 7,
+        "fields": {
+            "bank": "748",
+            "status": true,
+            "created_at": "2019-06-10T15:00:06Z",
+            "updated_at": "2019-06-10T15:00:06Z"
+        }
+    },
+    {
+        "model": "financial.bank",
+        "pk": 8,
+        "fields": {
+            "bank": "756",
+            "status": true,
+            "created_at": "2019-06-10T15:00:07Z",
+            "updated_at": "2019-06-10T15:00:07Z"
+        }
+    },
+    {
+        "model": "financial.bank",
+        "pk": 9,
+        "fields": {
+            "bank": "077",
+            "status": true,
+            "created_at": "2019-06-10T15:00:08Z",
+            "updated_at": "2019-06-10T15:00:08Z"
+        }
+    },
+    {
+        "model": "financial.bank",
+        "pk": 10,
+        "fields": {
+            "bank": "070",
+            "status": true,
+            "created_at": "2019-06-10T15:00:09Z",
+            "updated_at": "2019-06-10T15:00:09Z"
+        }
+    }
+]
