@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from contracts.models import LoanContract
+from contracts.models import LoanContract, LoanContractPayment
 
 
 class LoanContractSerializer(serializers.ModelSerializer):
@@ -27,3 +27,15 @@ class LoanContractSerializer(serializers.ModelSerializer):
         user.ip_address = self.context['request'].META.get('REMOTE_ADDR')
         user.save()
         return user
+
+
+class LoanContractPaymentSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = LoanContractPayment
+        fields = (
+            'id',
+            'loan_contract',
+            'payment_amount',
+            'payment_date'
+        )

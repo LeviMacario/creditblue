@@ -11,4 +11,5 @@ urlpatterns = router.urls
 urlpatterns += [
     path('auth_login/', user_views.ObtainAuthToken.as_view()),
     path('loan_contracts/', contract_views.LoanContractListCreate.as_view()),
+    path('payments/', contract_views.LoanContractPaymentListCreate.as_view()),
 ]
