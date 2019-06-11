@@ -40,5 +40,5 @@ class User(AbstractUser, TimeStampedModel):
             'email': self.email,
             'first_name': self.first_name,
             'last_name': self.last_name,
-            'avatar': self.avatar.url
+            'avatar': self.avatar.url if self.avatar else ''
         }
