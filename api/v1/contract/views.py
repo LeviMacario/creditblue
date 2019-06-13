@@ -32,3 +32,32 @@ class LoanContractPaymentListCreate(generics.ListCreateAPIView):
             loan_contract__responsible=self.request.user
         )
         return qs
+
+
+class LoanContractDetail(generics.RetrieveAPIView):
+    authentication_classes = (authentication.TokenAuthentication,)
+    permission_classes = (permissions.IsAuthenticated,)
+    serializer_class = serializers.LoanContractSerializer
+    model = LoanContract
+
+    def get_queryset(self):
+        """
+        Return the `QuerySet` that will be used to look up the object.
+
+        Note that this method is called by the default implementation of
+        `get_object` and may not be called if `get_object` is overridden.
+        """
+        if self.queryset is None:
+            if self.model:
+                return self.model._default_manager.filter(
+                    responsible=self.request.user
+                )
+            else:
+                raise ImproperlyConfigured(
+                    "%(cls)s is missing a QuerySet. Define "
+                    "%(cls)s.model, %(cls)s.queryset, or override "
+                    "%(cls)s.get_queryset()." % {
+                        'cls': self.__class__.__name__
+                    }
+                )
+        return self.queryset.filter(responsible=self.request.user)

@@ -1,4 +1,6 @@
+from decimal import Decimal
 from django.db import models
+from django.db.models import Sum
 from core.models import StatusDate, TimeStampedModel
 
 from django.db.models.signals import pre_save
@@ -60,6 +62,23 @@ class LoanContract(StatusDate):
             'customer': self.customer
         }
         return 'Contrato {id} do cliente {customer}'.format(**params)
+
+    @property
+    def amount_due(self):
+        amount_total = self._amount_total()
+        amount_str = 'R$ {0:.2f}'.format(amount_total)
+        return amount_str.replace('.', ',')
+
+    def _amount_total(self):
+        amount_rate = self.amount * (self.interest_rate / Decimal('100.0'))
+        return self.amount + amount_rate - self._sum_payments()
+
+    def _sum_payments(self):
+        payments = self.loancontractpayment_set.all()
+        if not payments.exists():
+            return Decimal('0.0')
+        total = payments.aggregate(sum_payment_amount=Sum('payment_amount'))
+        return total['sum_payment_amount']
 
 
 class LoanContractPayment(TimeStampedModel):
